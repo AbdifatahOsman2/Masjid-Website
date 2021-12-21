@@ -94,9 +94,7 @@ export default function Nav(props) {
               <ListItemText primary="Members"/>
               </ListItem>
               </Link>
-              
-            
-        
+
           </>
           )}
           </List>

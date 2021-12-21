@@ -5,12 +5,8 @@ const apiURL =
     ? "http://localhost:8000"
     : process.env.REACT_APP_API_URL;
 
-  const instance = axios.create({
-    baseURL: apiURL
-  })
+  axios.defaults.withCredentials = true;
 
-  instance.defaults.withCredentials = false
-axios.defaults.withCredentials = true;
 
 export const defaultRoute = async () => {
   try {
@@ -75,6 +71,24 @@ export const updateEvent = async (updatedEvent, eventId) => {
 export const deleteEvent = async (eventId) => {
   try {
     await axios.delete(`${apiURL}/events/${eventId}`)
+  } catch (error) {
+    console.error(error.message)
+  }
+}
+
+
+export const getAllMadrasahs = async() => {
+  try {
+    const response = await axios.get(`${apiURL}/madrasahs/`)
+    return response.data
+  } catch (error) {
+    console.error(error.message)
+  }
+}
+
+export const postMadrasahs = async (newMadrasahs) => {
+  try {
+    await axios.post(`${apiURL}/madrasahs/`, newMadrasahs)
   } catch (error) {
     console.error(error.message)
   }

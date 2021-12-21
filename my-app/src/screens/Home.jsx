@@ -26,13 +26,21 @@ const Home = () => {
 
   const [events, setEvents] = useState([]);
 
+
+  const instance = axios.create({
+    baseURL: `https://api.pray.zone/v2/times/today.json?city=phoenix&timeformat=1`
+  })
+
+  instance.defaults.withCredentials = false;
+  
+
   useEffect(() => {
     getAllEvents().then((fetchedEvents) => setEvents(fetchedEvents));
   }, []);
 
   const getSalah = async () => {
       try {
-      const response = await axios.get(`https://api.pray.zone/v2/times/today.json?city=phoenix&timeformat=1`);
+      const response = await instance.get();
       const prayers = response.data.results.datetime[0].times
       setFajr(prayers.Fajr)
       setAsr(prayers.Asr)

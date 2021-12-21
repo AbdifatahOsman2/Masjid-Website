@@ -2,12 +2,16 @@ from flask import Flask, g
 import os
 from flask_cors import CORS
 from flask_login import LoginManager, login_manager
+
 from db import DATABASE, initialize
 
+
+from madrasah import Madrasah
 from event import Event
 from user import User
 from resources.events import event
 from resources.users import user
+from resources.madrasahs import madrasah
 
 DEBUG = True
 PORT = 8000
@@ -42,11 +46,12 @@ def index():
 
 app.register_blueprint(user)
 app.register_blueprint(event)
+app.register_blueprint(madrasah)
 
 origins=['http://localhost:3000']
 
 if 'DATABASE_URL' in os.environ:
-    initialize([Event, User])
+    initialize([Event, User, Madrasah])
     app.config['SESSION_COOKIE_SECURE'] = True
     app.config['SESSION_COOKIE_HTTPONLY'] = False
     app.config['SESSION_COOKIE_SAMESITE'] = 'None'
@@ -55,5 +60,5 @@ if 'DATABASE_URL' in os.environ:
 CORS(app, origins=origins, supports_credentials=True)
 
 if __name__ == '__main__':
-    initialize([ Event, User ])
+    initialize([ Event, User, Madrasah ])
     app.run(debug=DEBUG, port=PORT)

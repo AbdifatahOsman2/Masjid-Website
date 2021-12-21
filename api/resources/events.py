@@ -7,7 +7,6 @@ from event import Event
 event = Blueprint('events', __name__, url_prefix='/events')
 
 @event.route('/', methods=['GET'])
-@login_required
 def get_all_events():
     try:
         events = [model_to_dict(event) for event in Event.select()]
