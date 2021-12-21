@@ -1,0 +1,19 @@
+
+.class-card{
+    margin: 100px 0px 0px 10px;
+    padding: 10px;
+    background-color: #473983;
+    border-radius: 8px;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.class-card h1{
+    text-align: left;
+    margin: 0px 0px 0px 10px;
+}
+
+#arrow-icon{
+    text-align: right;
+    margin: 0px 0px 0px 270px;
+}

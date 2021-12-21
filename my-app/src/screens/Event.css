@@ -1,0 +1,19 @@
+.events-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 120px 0px 0px 25px;
+}
+.event-container{
+    width: 600px;
+    height: auto;
+    border-radius: 8px;
+    background-color: #009688;
+    margin: 10px;
+}
+.events-section h1{
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: lighter;
+    color: rgb(0, 0, 0);
+}
