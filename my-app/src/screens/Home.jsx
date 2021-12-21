@@ -3,8 +3,11 @@ import axios from 'axios'
 import { getAllEvents } from "../services";
 import { useEffect } from "react";
 import masjid from '../images/pic.jpeg'
-import SendIcon from '@mui/icons-material/Send';
 
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import SendIcon from '@mui/icons-material/Send';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import { Box } from '@mui/system';
 import { Button, Link } from '@mui/material';
 import { Grid } from '@mui/material';
@@ -110,7 +113,7 @@ const Home = () => {
 
         <Grid borderLeft={2} item xs={12} sm={4}  className="site-map">
         <div className='site-map-container'>
-        <h1>SiteMap</h1>
+        <h1>Explore!</h1>
         <Link href='/madrasah'>
           <p>Madrasah</p>
         </Link>
@@ -123,10 +126,27 @@ const Home = () => {
           </div>
         </Grid>
 
+        <Grid borderLeft={2} item xs={62} sm={4} className='site-map'>
+        <h1>Address</h1>
 
-        <Grid borderLeft={2} item xs={12} sm={4} className='social-media'>
-        <h1>Social Media</h1>
+        <Link href='https://www.instagram.com/masjidalrahma/'>
+        <InstagramIcon fontSize='large' id="InstagramIcon"/>
+        </Link>
         
+
+        <Link href='https://www.youtube.com/channel/UCZhSVWVHK0vfxZOOKWA_-ZQ'>
+        <YouTubeIcon fontSize='large' id="YoutubeIcon"/>
+        </Link>
+        
+
+        <Link href='https://www.facebook.com/AlRahmaAZ/'>
+        <FacebookIcon fontSize='large' id="FacebookIcon"/>
+        </Link>
+        
+        <Link href='https://www.google.com/maps/place/Masjid+Al-Rahma/@33.4662892,-112.0210987,17z/data=!4m12!1m6!3m5!1s0x872b0de82603e91b:0xf79318a7266cf911!2sMasjid+Al-Rahma!8m2!3d33.466064!4d-112.0189107!3m4!1s0x872b0de82603e91b:0xf79318a7266cf911!8m2!3d33.466064!4d-112.0189107'>
+        <p id='address'>2916 E McDowell Rd, Phoenix, AZ 85008</p>
+        </Link>
+
         </Grid>
 
 
