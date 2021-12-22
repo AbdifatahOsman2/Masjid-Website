@@ -2,12 +2,8 @@
   text-align: center;
 }
 
-#loading{
-  margin: 100px auto;
-  padding: 0 auto;
+body{
+  background-color: #252a2c;
+  color: white;
 }
-.load{
-  display: flex;
-  flex-direction: row;
-  margin: 350px 100px 0px 850px;
-}
+

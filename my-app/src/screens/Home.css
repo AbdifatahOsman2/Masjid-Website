@@ -18,7 +18,7 @@
     position: absolute;
     top: 55%;
     color: white;
-    left: 0%;
+    left: 15%;
     transform: translate(50%, -350%);
     font-size: 55px;
     font-family: 'Bakbak One', cursive;
@@ -26,7 +26,7 @@
 .home-btn{
     position: absolute;
     top: 36%;
-    left: 26%;
+    left: 20%;
 }
 .announcements-section h1{
     margin: -250px 0px 0px 240px;
@@ -52,6 +52,7 @@
     margin: 30px 0px 0px 240px;
     font-size: 30px;
     font-weight: 400;
+    color: white;
     text-align: left;
     font-family: 'Ubuntu', sans-serif;
 }
@@ -63,6 +64,31 @@
     font-size: 24px;
     padding-bottom: 15px;
 }
+
+.Location a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    position: relative;
+}
+.Location a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #1b7ccc;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.Location a:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
 .Reach h4{
     margin: 20px 0px 0px 240px;
     font-size: 30px;
@@ -79,13 +105,43 @@
     letter-spacing: 0.5px;
     
 }
+
+
+.Reach a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    position: relative;
+}
+.Reach a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #1b7ccc;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.Reach a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+
 #numb{
     font-weight: bold;
 }
 
 .Prayer{
     margin: 30px 0px 0px 0px;
-    background-color: #f3ece04b;
+    background-color: rgba(55, 43, 21, 0.29);
+    /* background-image: url('../images/salahBG.jpg');
+    background-position: center; */
     width: auto;
     height: 430px;
 }
@@ -121,11 +177,11 @@
 }
 
 #prayers-conainer span:hover{
-    height: 210px;
-    width: 210px;
+    height: 205px;
+    width: 205px;
     cursor: pointer;
     color: rgb(255, 255, 255);
-    background-color: rgb(4, 167, 58);
+    background-color: blueviolet;
 }
 .Prayer p{
     padding: 40px 0px 0px 240px;
@@ -134,6 +190,32 @@
     font-weight: lighter;
     font-size: 20px;
 }
+
+.Prayer a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    position: relative;
+}
+.Prayer a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #1b7ccc;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.Prayer a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
 .about p {
     border: 1px solid black;
     padding: 105px;
@@ -143,7 +225,6 @@
     width: 1000px;
     letter-spacing: 1px;
     text-align: center;
-
 }
 
 .footer-main{
@@ -156,7 +237,6 @@
     width: 200px;
     height: 200px;
     margin: 60px 100px 0px 0px;
-
 }
 .footer-main .contact {
     border-right: 2px solid rgb(255, 255, 255);
@@ -170,23 +250,23 @@
     cursor: pointer;
     text-decoration: none;
     color: white;
+    transition: 250ms ease-in-out;
+}
+
+.site-map a:hover{
+    font-size: 20px;
 }
 
 .site-map-container{
     margin: 0px 0px 0px 0px;
 }
-.site-map-container h1{
+.site-map h1{
     font-size: 30px;
-}
-
-.site-map-container h2{
-    font-size: 24px;
 }
 
 #InstagramIcon, #YoutubeIcon, #FacebookIcon{
     font-size: 90px;
     margin: 10px;
-    transition: 500ms;
 }
 
 #InstagramIcon:hover{
@@ -201,7 +281,26 @@
     fill: blueviolet;
 }
 
-
 #address{
     font-size: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+#address::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(98, 26, 165);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+#address:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }

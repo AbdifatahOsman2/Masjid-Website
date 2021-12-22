@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -10,6 +11,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from "react-router-dom";
 import logo from '../images/logo.png'
 import { withTheme } from '@emotion/react';
+import { logout } from '../services';
+
 
 const useStyles = makeStyles ({
   list: {
@@ -29,14 +32,24 @@ const useStyles = makeStyles ({
 export default function Nav(props) {
   const classes = useStyles();
   const [open, setOpen] = useState(false)
+  const history = useHistory()
+
+  const handleClose = () => setOpen(false)
+
+  const handleLogout = async () => {
+    await logout()
+    props.setUser(null);
+    history.push('/')
+
+  }
+
+
   return (
     <nav>
     <Box sx={{ flexGrow: 1 }}>
-    <AppBar position="fixed">
+    <AppBar position="fixed" color='primary'>
   
         <Toolbar>
-
-
           <IconButton
           edge="start"
           color="inherit"
@@ -61,36 +74,41 @@ export default function Nav(props) {
             <>
   
             <Link to="/event" className={classes.link}>
-            <ListItem button onClick={() => {}}>
+            <ListItem button onClick={() => {handleClose()}}>
             <ListItemText primary="Events"/>
             </ListItem>
             </Link>
             
             <Link to="/event-creation" className={classes.link}>
-            <ListItem button onClick={() => {}}>
+            <ListItem button onClick={() => {handleClose()}}>
             <ListItemText primary="Create an Event"/>
             </ListItem>
             </Link>
 
+            <Link to="/" className={classes.link}>
+            <ListItem button onClick={() => {handleClose(); handleLogout()}}>
+            <ListItemText primary="Logout"/>
+            </ListItem>
+            </Link>
             
             </>
             ):(
               <>
               
               <Link to="/home" className={classes.link}>
-              <ListItem button onClick={() => {}}>
+              <ListItem button onClick={() => {handleClose()}}>
               <ListItemText primary="donate"/>
               </ListItem>
               </Link>
               
               <Link to="/madrasah" className={classes.link}>
-              <ListItem button onClick={() => {}}>
+              <ListItem button onClick={() => {handleClose()}}>
               <ListItemText primary="Madrasah"/>
               </ListItem>
               </Link>
               
               <Link to="/Login" className={classes.link}>
-              <ListItem button onClick={() => {}}>
+              <ListItem button onClick={() => {handleClose()}}>
               <ListItemText primary="Members"/>
               </ListItem>
               </Link>

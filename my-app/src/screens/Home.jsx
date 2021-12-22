@@ -3,6 +3,7 @@ import axios from 'axios'
 import { getAllEvents } from "../services";
 import { useEffect } from "react";
 import masjid from '../images/pic.jpeg'
+import salagBg from '../images/salahBG.jpg'
 
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -61,7 +62,7 @@ const Home = () => {
   return (
     <section className='home'>
     <div className='home-top'>
-    <div className='centered'>Join Us every Friday for Jummah Prayer</div>
+    <div className='centered'>Welcome to Masjid Al-Rahma</div>
     <Button href="#about" variant='outlined' endIcon={<SendIcon />} className='home-btn'>Learn More</Button>
     <img id='masjid-img' src={masjid}/>
     </div>
@@ -69,7 +70,7 @@ const Home = () => {
     <div className='announcements-section'>
     <h1>Join Us</h1>
     
-    <p>Upcoming Events</p>
+    <h2>Upcoming Events</h2>
     <div>
     {events.map((event) => (
       <p>{event.name} at {event.location} during {event.time}</p>
@@ -78,9 +79,11 @@ const Home = () => {
     </div>
 
     <div className='Location'>
-    <p>Location</p>
+    <h3>Location</h3>
     <p> We are located at <a href='https://www.google.com/maps?q=Masjid+Al-Rahma&gsas=1&lsig=AB86z5UI_7qKH88NT3jvt6pjHFvv&biw=1920&bih=980&dpr=1&um=1&ie=UTF-8&sa=X&ved=2ahUKEwj9uMLT6Ov0AhV5lWoFHYwLBikQ_AUoAXoECAIQAw'> 2916 E Mcdowell rd Phoenix AZ 85008</a>, with plenty of parking spots available.</p>
     </div>
+
+
 
     <div className='Reach'>
     <h4>Madrasah</h4>
@@ -133,12 +136,10 @@ const Home = () => {
         <InstagramIcon fontSize='large' id="InstagramIcon"/>
         </Link>
         
-
         <Link href='https://www.youtube.com/channel/UCZhSVWVHK0vfxZOOKWA_-ZQ'>
         <YouTubeIcon fontSize='large' id="YoutubeIcon"/>
         </Link>
         
-
         <Link href='https://www.facebook.com/AlRahmaAZ/'>
         <FacebookIcon fontSize='large' id="FacebookIcon"/>
         </Link>

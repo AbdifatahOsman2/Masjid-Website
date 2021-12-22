@@ -17,10 +17,14 @@ const Event = (props) => {
       <>
         {events.map((event) => (
           <div className="event-container">
-          <h1>{event.name} at {event.location} during {event.time}</h1>
-
-          <Button style={{margin:"10px"}} href='/edit-event' variant="contained" color="primary">Edit</Button>
-      
+          <h1>
+          <span className="event-text">{event.name} </span>
+          at <span className="event-text">{event.location} </span>
+          during <span className="event-text">{event.time}</span>
+          </h1>
+          <Link to='/edit-event'>
+          <Button style={{margin:"10px"}}  variant="contained" color="primary">Edit</Button>
+          </Link>
           </div>
           ))}
           </>

@@ -11,9 +11,18 @@
     background-color: #009688;
     margin: 10px;
 }
+
+.event-container a{
+    text-decoration: none;
+}
+
 .events-section h1{
     font-size: 20px;
     font-family: 'Ubuntu', sans-serif;
     font-weight: lighter;
     color: rgb(0, 0, 0);
+}
+
+.event-container .event-text{
+    font-weight: 400;
 }

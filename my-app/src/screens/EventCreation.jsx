@@ -38,6 +38,7 @@ const EventCreation = () => {
         id="standard-basic"
         label="event name"
         variant="filled"
+        
         value={name}
         onChange={(e) => setName(e.target.value)}
       />

@@ -32,9 +32,7 @@ const EditEvent = (props) => {
             console.log(event.name)
         }
         fetchEvents()
-
     }, [])
-
 
     const handleSubmit = async(e) => {
         try {
@@ -44,7 +42,7 @@ const EditEvent = (props) => {
                 location,
                 time
             }
-            await updateEvent(updateEvent, eventId)
+            await updateEvent(updatedEvent, eventId)
             history.push("/event")
         } catch (error) {
             console.error(error)
@@ -59,6 +57,14 @@ const EditEvent = (props) => {
 
   return (
     <section className="edit-event" >
+
+    <form onSubmit={handleSubmit} className="edit-form">
+
+        <input value={name} onChange={(e) => setName(e.target.value)}/>    
+
+    
+
+    </form>
 
     </section>
   );
