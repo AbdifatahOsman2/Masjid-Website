@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { updateEvent, deleteEvent } from "../services";
 import { getAllEvents } from "../services";
-import { getAllStops } from "../services"
 import { useHistory, useParams } from "react-router"
 
 import { Box } from "@mui/system";
@@ -29,7 +28,6 @@ const EditEvent = (props) => {
             setName(event.name)
             setLocation(event.location)
             setTime(event.time)
-            console.log(event.name)
         }
         fetchEvents()
     }, [])
@@ -48,7 +46,6 @@ const EditEvent = (props) => {
             console.error(error)
         }
     }
-
 
     const handleDelete = async () => {
         await deleteEvent(eventId)

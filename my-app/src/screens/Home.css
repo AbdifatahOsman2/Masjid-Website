@@ -2,6 +2,8 @@
     height: 250vh;
     
 }
+
+
 .home-top{
     margin: 27px 0px 0px 0px;
     width: auto;
@@ -153,7 +155,7 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
-#prayers-conainer span{
+#prayers-container span{
     display: inline-block;
     margin: 0px 40px 0px 50px;
     font-family: 'Oxygen', sans-serif;
@@ -168,7 +170,7 @@
     transition: 200ms ease-in;
     
 }
-#prayers-conainer li{
+#prayers-container li{
     margin-top: 55px;
     font-size: 30px;
     list-style: none;
@@ -176,7 +178,7 @@
     color: rgb(255, 255, 255);
 }
 
-#prayers-conainer span:hover{
+#prayers-container span:hover{
     height: 205px;
     width: 205px;
     cursor: pointer;

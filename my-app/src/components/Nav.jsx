@@ -20,7 +20,7 @@ const useStyles = makeStyles ({
   },
   link: {
     textDecoration: 'none',
-   
+    
   },
   image:{
     padding: 5,
@@ -49,7 +49,7 @@ export default function Nav(props) {
     <Box sx={{ flexGrow: 1 }}>
     <AppBar position="fixed" color='primary'>
   
-        <Toolbar>
+        <Toolbar >
           <IconButton
           edge="start"
           color="inherit"
@@ -59,13 +59,14 @@ export default function Nav(props) {
             <MenuIcon />
           </IconButton>
           <SwipeableDrawer
+          
           anchor='left'
           open={open}
           onClose={() => setOpen(false)}
           onOpen={() => {}}
           >
           <div className={classes.list}>
-          <Box textAlign='center' p={2}>
+          <Box textAlign='center' p={2} >
           Menu
           </Box>
           <Divider/>

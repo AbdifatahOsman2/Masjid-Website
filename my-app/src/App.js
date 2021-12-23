@@ -1,4 +1,5 @@
-import ClipLoader from "react-spinners/ClipLoader";
+import DotLoader from "react-spinners/DotLoader";
+// import { DotLoader } from "react-spinners";
 import { Route, Switch } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -16,6 +17,7 @@ import "./screens/Classes.css";
 import './screens/EventCreation.css'
 import "./screens/Home.css";
 import './screens/Event.css'
+import './screens/PopUp.css'
 import "./App.css";
 
 function App() {
@@ -33,7 +35,7 @@ function App() {
     <div className="App">
       {loading ? (
         <div className="load">
-          <ClipLoader
+          <DotLoader
             id="loading"
             color={"#000"}
             loading={loading}

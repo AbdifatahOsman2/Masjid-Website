@@ -3,6 +3,7 @@ import axios from 'axios'
 import { getAllEvents } from "../services";
 import { useEffect } from "react";
 import masjid from '../images/pic.jpeg'
+import PopUp from './PopUp'
 import salagBg from '../images/salahBG.jpg'
 
 import YouTubeIcon from '@mui/icons-material/YouTube';
@@ -51,7 +52,6 @@ const Home = () => {
       setDhuhr(prayers.Dhuhr)
       setMaghrib(prayers.Maghrib)
       setIsha(prayers.Isha)
-          console.log(prayers.Isha)
       } catch (error) {
           console.error(error)
       }
@@ -87,12 +87,13 @@ const Home = () => {
 
     <div className='Reach'>
     <h4>Madrasah</h4>
-    <p>We have Madrasah available for all ages during the weekend and after school sign up <a href='#'>here</a>.</p>
+    <p>We have Madrasah available for all ages during the weekend and after school sign up<PopUp id="pop-up"/></p>
     </div>
+
 
     <div className='Prayer'>
     <h5>Salah Times</h5>
-      <div id="prayers-conainer">
+      <div id="prayers-container">
       <span><li id="first" >Fajr <br/> {fajr}</li></span>
       <span><li id="first" >Dhuhr <br/> {Dhuhr}</li></span>
       <span><li id="first" >Asr <br/> {Asr}</li></span>
@@ -149,8 +150,7 @@ const Home = () => {
         </Link>
 
         </Grid>
-
-
+        
       </Grid>
     </Container>
     </div>
