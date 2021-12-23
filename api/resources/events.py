@@ -33,7 +33,7 @@ def update_event(id):
     body = request.get_json()
     (Event
         .update(**body)
-        .where(event.id==id)
+        .where(Event.id==id)
         .execute())
     return jsonify(model_to_dict(Event.get_by_id(id))), 200
 

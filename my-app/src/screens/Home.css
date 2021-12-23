@@ -256,6 +256,7 @@
 }
 
 .site-map a:hover{
+    color: blueviolet;
     font-size: 20px;
 }
 
