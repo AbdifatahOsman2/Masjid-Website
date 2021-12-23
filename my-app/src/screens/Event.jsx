@@ -22,7 +22,7 @@ const Event = (props) => {
           at <span className="event-text">{event.location} </span>
           during <span className="event-text">{event.time}</span>
           </h1>
-          <Link to='/edit-event'>
+          <Link to={`/edit-event/${event.id}`}>
           <Button style={{margin:"10px"}}  variant="contained" color="primary">Edit</Button>
           </Link>
           </div>

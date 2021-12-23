@@ -67,7 +67,7 @@ function App() {
                 <EventCreation user={user} setUser={setUser}/>
               </Route>
 
-              <Route path="/edit-event">
+              <Route path="/edit-event/:id">
                 <EditEvent user={user} setUser={setUser}/>
               </Route>
               
