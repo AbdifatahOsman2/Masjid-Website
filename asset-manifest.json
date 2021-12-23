@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Masjid-Website/static/css/main.651dc00e.css",
+    "main.js": "/Masjid-Website/static/js/main.8cc887a3.js",
+    "static/js/787.fec03637.chunk.js": "/Masjid-Website/static/js/787.fec03637.chunk.js",
+    "static/media/pic.jpeg": "/Masjid-Website/static/media/pic.992ec7b7c71f8a4f4c03.jpeg",
+    "static/media/salahBG.jpg": "/Masjid-Website/static/media/salahBG.bf05dad03764de1b3f88.jpg",
+    "static/media/logo.png": "/Masjid-Website/static/media/logo.5f6538ae4dcb528a5f63.png",
+    "index.html": "/Masjid-Website/index.html",
+    "main.651dc00e.css.map": "/Masjid-Website/static/css/main.651dc00e.css.map",
+    "main.8cc887a3.js.map": "/Masjid-Website/static/js/main.8cc887a3.js.map",
+    "787.fec03637.chunk.js.map": "/Masjid-Website/static/js/787.fec03637.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.651dc00e.css",
+    "static/js/main.8cc887a3.js"
+  ]
+}
