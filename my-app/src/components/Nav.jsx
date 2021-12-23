@@ -96,7 +96,7 @@ export default function Nav(props) {
             ):(
               <>
               
-              <Link to="/home" className={classes.link}>
+              <Link to="/donate" className={classes.link}>
               <ListItem button onClick={() => {handleClose()}}>
               <ListItemText primary="donate"/>
               </ListItem>

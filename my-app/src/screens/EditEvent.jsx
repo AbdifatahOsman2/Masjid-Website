@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { updateEvent, deleteEvent } from "../services";
 import { getAllEvents } from "../services";
 import { useHistory, useParams } from "react-router";
-
+import { makeStyles } from "@mui/material";
 import { Box } from "@mui/system";
 import { TextField } from "@mui/material";
 import { Button } from "@mui/material";
@@ -16,6 +16,11 @@ const EditEvent = () => {
   const history = useHistory();
   const params = useParams();
   const eventId = params.id;
+
+
+
+
+
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -50,6 +55,7 @@ const EditEvent = () => {
     history.push("/event");
   };
 
+
   return (
     <section className="edit-event">
 
@@ -63,6 +69,9 @@ const EditEvent = () => {
   autoComplete="off"
 >
   <TextField
+    style={{
+      backgroundColor: "inherit",
+    }}
     id="standard-basic"
     variant="outlined"
     value={name}

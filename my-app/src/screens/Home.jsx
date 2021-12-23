@@ -106,7 +106,7 @@ const Home = () => {
     <div className='about' id='about'>
     <p>Welcome to Masjid Al Rahma! We are thrilled that you have chosen to learn more about us. We hope you will take the time to get to know us better and to allow us the opportunity to know you. We always welcome our neighborhoods and Communities partnering to help together for those who are in need of assistance. If we can be of any service to you or answer any question that you may have, please stop by or call us.</p>
     </div>
-
+{/* ---------------------------------------------------------------------FOOTER START HERE!----------------------------------------------------------------------------------------------------------------------------------- */}
     <footer>
     <div className='footer-main'>
     <Container maxWidth>

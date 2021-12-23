@@ -10,6 +10,7 @@ import Event from "./screens/Event";
 import EventCreation from "./screens/EventCreation";
 import Classes from "./screens/Classes";
 import EditEvent from "./screens/EditEvent";
+import DonationPage from './screens/DonationPage'
 import './screens/EditEvent.css'
 import './screens/Login.css'
 import "./components/Nav.css";
@@ -69,6 +70,10 @@ function App() {
 
               <Route path="/edit-event/:id">
                 <EditEvent user={user} setUser={setUser}/>
+              </Route>
+
+              <Route path='/donate'>
+                <DonationPage/>
               </Route>
               
             </main>
