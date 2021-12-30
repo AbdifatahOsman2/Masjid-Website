@@ -73,6 +73,7 @@ const EventCreation = () => {
         variant="filled"
         value={time}
         onChange={(e) => setTime(e.target.value)}
+        
       />
     </Box>
     

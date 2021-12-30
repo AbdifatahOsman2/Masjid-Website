@@ -19,6 +19,7 @@ import './screens/EventCreation.css'
 import "./screens/Home.css";
 import './screens/Event.css'
 import './screens/PopUp.css'
+import './screens/DonationPage.css'
 import "./App.css";
 
 function App() {

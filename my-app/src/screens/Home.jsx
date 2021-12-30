@@ -20,8 +20,7 @@ import logo from '../images/logo.png'
 const Home = () => {
 
 
-  const d = new Date();
-  const currentDay = d.getDate()
+
 
   const [fajr, setFajr] = useState()
   const [Dhuhr, setDhuhr] = useState()

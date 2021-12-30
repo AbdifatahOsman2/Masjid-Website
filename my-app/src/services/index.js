@@ -5,7 +5,7 @@ const apiURL =
     ? "http://localhost:8000"
     : process.env.REACT_APP_API_URL;
 
-  axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = true;
 
 
 export const defaultRoute = async () => {
