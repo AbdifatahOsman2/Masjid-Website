@@ -6,7 +6,7 @@ Masjid-Alrahma Website
 
 ## Project Description
 
-A redesigned web page for the mosque Masjid-AlRahma
+A redesigned web page for the mosque, Masjid-AlRahma
 
 ## Wireframes
 
@@ -35,12 +35,12 @@ N/A
 N/A
 ```
 
-#### MVP 
+## MVP Goals
 ```
 N/A
 ```
 
-#### PostMVP  
+## PostMVP  Goals
 ```
 N/A
 ```
