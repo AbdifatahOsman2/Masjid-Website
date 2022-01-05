@@ -21,7 +21,7 @@ const Home = () => {
 
 
 
-
+  const [hijri, setHijri] = useState()
   const [fajr, setFajr] = useState()
   const [Dhuhr, setDhuhr] = useState()
   const [Asr, setAsr] = useState()
@@ -46,6 +46,9 @@ const Home = () => {
       try {
       const response = await instance.get();
       const prayers = response.data.results.datetime[0].times
+      const hijri = response.data.results.datetime[0].date.hijri
+      console.log(hijri)
+      setHijri(hijri)
       setFajr(prayers.Fajr)
       setAsr(prayers.Asr)
       setDhuhr(prayers.Dhuhr)
@@ -91,7 +94,7 @@ const Home = () => {
 
 
     <div className='Prayer'>
-    <h5>Salah Times</h5>
+    <h5>Salah Times </h5>
       <div id="prayers-container">
       <span><li id="first" >Fajr <br/> {fajr}</li></span>
       <span><li id="first" >Dhuhr <br/> {Dhuhr}</li></span>

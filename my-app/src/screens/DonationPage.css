@@ -1,3 +1,9 @@
 .donation-section{
     margin: 100px;
+
+}
+
+.donation-inputs{
+display: flex;
+flex-direction: column;
 }

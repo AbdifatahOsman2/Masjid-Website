@@ -167,7 +167,7 @@
     color: white;
     text-align: center;
     font-size: 20px;
-    transition: 200ms ease-in;
+    transition: 250ms ease-in;
     
 }
 #prayers-container li{
@@ -179,8 +179,7 @@
 }
 
 #prayers-container span:hover{
-    height: 205px;
-    width: 205px;
+    border-radius: 25%;
     cursor: pointer;
     color: rgb(255, 255, 255);
     background-color: blueviolet;
